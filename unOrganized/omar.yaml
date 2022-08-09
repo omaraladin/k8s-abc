@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 771982cb36f7a11cd3c638f446093b72725256f9898458ebbdda59256315c0bb
+    cni.projectcalico.org/podIP: 192.168.149.150/32
+    cni.projectcalico.org/podIPs: 192.168.149.150/32
+    env: test
+    runTime: C++
+  name: abshnb
+  namespace: default
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: eminems

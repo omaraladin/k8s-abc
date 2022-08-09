@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+        name: fast-car
+data:
+        car.make: Ferrari
+        car.model: x5
+        car.trim: Shelby

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+        name: utopia
+        labels:
+                name: my-nginx
+                func: web-server            
+        annotations:
+                runTime: C++
+                env: prod
+spec:
+        containers:
+                - image: nginx
+                  name: karl-marx

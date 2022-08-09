@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: shared-fs
+  namespace: default
+spec:
+  containers:
+  - image: busybox
+    name: alpha
+    volumeMounts:
+    - mountPath: /alphadir
+      name: sharevol
+  - image: busybox
+    name: bectacont
+    volumeMounts:
+    - mountPath: /betadir
+      name: sharevol
+  volumes:
+  - name: sharevol
+    emptyDir: {}

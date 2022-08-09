@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 5aafca20a8b3f052ac8ebf0dbf1294c8615ce514ccb99ba959d5cb7a7317ef3d
+    cni.projectcalico.org/podIP: 192.168.149.183/32
+    cni.projectcalico.org/podIPs: 192.168.149.183/32
+  generateName: ghost-7f6c8cb465-
+  labels:
+    app: ghost-omar
+    env: argocd
+    sex: hisher
+    pod-template-hash: 7f6c8cb465
+  name: ghost-abshnb
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: ghost-7f6c8cb465
+    uid: 4ddcbf14-f6a8-45fe-a6df-4bdbf12c67dc
+spec:
+  containers:
+  - image: ghost
+    imagePullPolicy: Always
+    name: ghost
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-54fh7
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: wp01
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-54fh7
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
