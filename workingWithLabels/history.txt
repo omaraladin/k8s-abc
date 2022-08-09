@@ -1,0 +1,9 @@
+  685  kubectl get pods -l system=secondary -A
+  686  kubectl delete pods -l system=secondary
+  687  kubectl delete pods -l system=secondary -A
+  688  kubectl -n abar-project get pods
+  689  kubectl -n abar-project get deploy
+  690  kubectl -n abar-project delete deploy -l system=secondary
+  691  kubectl get nodes --show-labels
+  692  kubectl label node wp01 system- #Removing a label
+  693  kubectl get nodes --show-labels
