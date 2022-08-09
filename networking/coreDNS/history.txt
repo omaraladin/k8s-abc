@@ -1,0 +1,25 @@
+  609  kubectl get pod -l k8s-app -A
+  610  kubectl get pod -l k8s-app -A --show-labels
+  611  kubectl -n kube-system get pod coredns-64897985d-7kcfp -o yaml | more
+  612  kubectl -n kube-system get cn
+  613  kubectl -n kube-system get cm
+  614  kubectl -n kube-system describe cm coredns 
+  615  kubectl -n kube-system get cm coredns -o yaml
+  616  kubectl -n kube-system edit configmaps coredns 
+  617  kubectl -n kube-system delete pod coredns-64897985d-7kcfp coredns-64897985d-89tc2 
+  618  kubectl -n kube-system get pods
+  619  kubectl -n kube-system get pods -l k8s-app=coredns
+  620  kubectl -n kube-system get pods -l k8s-app=kube-dns
+  621  kubectl get deploy
+  622  kubectl create deploy nginx --image=nginx
+  623  kubectl expose deploy nginx --type=ClusterIP --port=80
+  624  kubectl get svc nginx
+  625  kubectl create -f ../coreDNS/nettool.yaml 
+  626  kubectl exec -it ubuntu 
+  627  kubectl exec -it ubuntu -- /bin/bash
+  628  kubectl exec -it nettool -- /bin/bash
+  629  kubectl -n kube-system edit configmaps coredns 
+  630  kubectl -n kube-system delete pods coredns-64897985d-rvg4f coredns-64897985d-xz5ch 
+  631  kubectl exec -it nettool -- /bin/bash
+  632  clear
+
