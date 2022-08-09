@@ -1,0 +1,45 @@
+  604  helm repo list
+  608  helm search hub database
+  609  helm repo add ealenn https://ealen.github.io/charts
+  610  helm repo update
+  611  helm repo list
+  612  helm upgrade -i tester ealenn/echo-server --debug
+  614  kubectl get svc
+  615  kubectl describe svc tester-echo-server 
+  616  curl 10.110.103.44
+  618  helm list
+  619  helm list -a
+  620  kubectl get deployments
+  621  kubectl get deployments --show-labels
+  622  helm uninstall tester
+  623  helm list
+  624  helm list -a
+  625  find $HOME -name *echo*
+  626  cd `find $HOME -name *echo*`
+  627  cd ../../.cache/helm/repository/
+  628  ls
+  629  cd ../../../k8s-abc/
+  630  cd helm/
+  631  cd ../../.cache/helm/repository/ ; tar -xvf echo-server-*
+  632  ls
+  633  cp -r echo-server* ../../../k8s-abc/helm/
+  634  ls
+  635  ls -l ../../../k8s-abc/helm/
+  636  cd ../../../k8s-abc/helm/
+  637  cd echo-server/
+  640  vim README.md
+  641  cat values.yaml 
+  642  helm repo add bitnami https://charts.bitnami.com/bitnami
+---------------------------------------------------------------------------------
+  646  cd ../
+  647  helm fetch bitnami/apache --untar
+  648  ls
+  649  ls apache/
+  650  cd apache/
+  652  vim values.yaml 
+  653  helm install my-webserver .
+  654  kubectl get deploy
+  655  watch kubectl get deploy
+  656  watch kubectl get pods
+  657  helm uninstall my-webserver
+  658  watch kubectl get pods
