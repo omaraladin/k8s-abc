@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+rules:
+  - host: app1.10.107.94.158.nip.io
+    http:
+      paths:
+        - backend:
+            service
+              name: app1-external
+              port:
+                number: 80
+          path: /
+          pathType: ImplementationSpecific          
+  - host: app2.10.107.94.142.nip.io
+    http:
+      paths:
+        - backend:
+            service
+              name: app2-enternal
+              port:
+                number: 8085
+          path: /
+          pathType: ImplementationSpecific
