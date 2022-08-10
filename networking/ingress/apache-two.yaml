@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-two
+  namespace: default
+  labels:
+    system: secondary
+spec:
+  selector:
+    matchLabels:
+      system: secondary
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        system: secondary
+    spec:
+      containers:
+         - image: httpd
+           imagePullPolicy: Always
+           name: apache-two
+           ports:
+           - containerPort: 80
+             protocol: TCP
+      nodeSelector:
+        system: secondOne
