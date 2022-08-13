@@ -1,0 +1,6 @@
+  810  kubectl describe deployments.apps apache-two | grep -A3 -i Volumes
+  811  kubectl describe nodes |grep -A5 -i label
+  812  kubectl describe nodes |grep -A5 -i taint
+  813  kubectl describe nodes |grep -i taint
+  814  kubectl label nodes cp01 status=vip
+  815  kubectl label nodes wp01 status=others

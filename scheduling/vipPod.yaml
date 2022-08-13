@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: others-pod
+spec:
+  containers:
+  - name: others-pod1
+    image: busybox
+    args:
+    - sleep
+    - "1000000"
+  - name: others-pod2
+    image: busybox
+    args:
+    - sleep
+    - "1000000"
+  - name: others-pod3
+    image: busybox
+    args:
+    - sleep
+    - "1000000"
+  - name: others-pod4
+    image: busybox
+    args:
+    - sleep
+    - "1000000"
+  nodeSelector:
+    status: others
