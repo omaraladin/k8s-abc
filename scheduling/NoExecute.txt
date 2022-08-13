@@ -1,0 +1,6 @@
+  888  kubectl create -f taint.yaml 
+  889  watch kubectl get pods -o wide
+  890  #All pods are running, now we will enforce NoExecute and let's see what happens
+  891  kubectl taint node wp01 s3storage=value:NoExecute
+  892  watch kubectl get pods -o wide
+  893  #All pods are Terminated, even though they were created before changing scheduling policy to NoExecute, because it will terminate untolerated pods

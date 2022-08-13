@@ -1,0 +1,9 @@
+  864  kubectl describe nodes |grep -i taint
+  865  kubectl taint node wp01 s3storage=value:PreferNoSchedule
+  866  kubectl describe nodes |grep -i taint
+  867  kubectl create -f taint.yaml 
+  868  watch kubectl get pods -o wide
+  869  kubectl taint node wp01 s3storage-
+  870  watch kubectl get pods -o wide
+#Now pods are scheduled because we "Prefered"NotSchedule, k8s-scheduler, however found only wp01 which is considered tainted, again we "Preferred" so it will still run pods on wp01
+

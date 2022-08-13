@@ -1,3 +1,4 @@
+#A deployment of Nginx with 8 pods or containers
 apiVersion: apps/v1
 kind: Deployment
 metadata:

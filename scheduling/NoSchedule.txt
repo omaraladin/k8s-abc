@@ -1,0 +1,4 @@
+  877  kubectl taint node wp01 s3storage=value:NoSchedule
+  878  kubectl create -f taint.yaml 
+  879  watch kubectl get pods -o wide
+#Now pods will not be scheduled and stuck at PENDING state, because we enforced NoSchedule, but if some were already running they will continue to run
