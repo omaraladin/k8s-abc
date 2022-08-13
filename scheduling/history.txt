@@ -4,3 +4,4 @@
   813  kubectl describe nodes |grep -i taint
   814  kubectl label nodes cp01 status=vip
   815  kubectl label nodes wp01 status=others
+# Now we can use NodeSelector to force particular pods to run on particular nodes
