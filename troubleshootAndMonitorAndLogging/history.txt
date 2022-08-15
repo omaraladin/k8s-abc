@@ -1,0 +1,31 @@
+  904  systemctl status kubelet
+  905  vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 
+  906  sudo vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 
+  907  sudo vim /var/lib/kubelet/config.yaml
+  908  sudo ls -l /etc/kubernetes/manifests/
+  909  sudo vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+  911  sudo vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+  913  journalctl -u kubelet -f
+  916  sudo journalctl -u kubelet -f
+  920  sudo find / -name "*apiserver*log"
+  921  sudo less /var/log/containers/kube-apiserver-cp01_kube-system_kube-apiserver-71afcab63afc11467431ef926a1d9ce28b3c6834e1498484b001ff90619af18f.log
+  922  sudo wc -l /var/log/containers/kube-apiserver-cp01_kube-system_kube-apiserver-71afcab63afc11467431ef926a1d9ce28b3c6834e1498484b001ff90619af18f.log
+  923  sudo tail -f /var/log/kube-apiserver.log
+  924  sudo ls -l /var/log/*kube*
+  925  sudo ls -l /var/log/conainera
+  926  sudo ls -l /var/log/conainer
+  927  sudo ls -l /var/log/conainers
+  928  cd /var/log/
+  929  ls
+  930  ls containers/
+  931  ls pods/
+  932  ls 
+  933  ls calico/
+  934  ls calico/cni/cni.log 
+  935  tailf calico/cni/cni.log
+  936  tail -f calico/cni/cni.log
+  938  kubectl logs taint-deployment-7bf4fc4f75-9v56b 
+  939  kubectl logs apache-two-5bdf688778-vs9hm 
+  940  kubectl get po -A
+  941  kubectl logs -n kube-system kube-apiserver-cp01 
+
