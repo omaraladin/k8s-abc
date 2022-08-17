@@ -1,4 +1,4 @@
-# Create a Role for a User to allow watch, get, and list both pods, and pods/log resources
+# Create a Role for a User to allow watch, get, and list both pods, and pods/log resources in beebox-mobile namespace
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
