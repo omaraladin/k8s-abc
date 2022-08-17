@@ -1,3 +1,4 @@
+#kubectl create secret generic nginx-htpasswd --from-file .htpasswd
 apiVersion: v1
 kind: Pod
 metadata:
