@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: never-policy-pod
+spec:
+  #a container will never be restarted even if WWIII started
+  restartPolicy: Never
+  containers:
+  - name: busybox
+    image: busybox
+    #Now the pod will remain in ERROR state in k get pods output and it will NEVER be restarted
+    command: ['sh', '-c', 'sleep 10; OMG I'm a bad command!']
+...
