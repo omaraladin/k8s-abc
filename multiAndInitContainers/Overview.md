@@ -1,5 +1,6 @@
 # Multi-containers-pod
 containers inside will share the Storagem Filesystenm, and Network of a single pod
+  * Often describe as sidecars and logging legacy app may be a fit use-case
 
 # InitContainers
 initContainers are containers that will run once and in-sequence before the startup of appContainers, and they have several use-cases:
