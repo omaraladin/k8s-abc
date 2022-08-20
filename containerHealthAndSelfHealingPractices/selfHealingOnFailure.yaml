@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: always-policy-pod
+  name: onfailuer-policy-pod
 spec:
   #only restarts if failed
   restartPolicy: OnFailure
