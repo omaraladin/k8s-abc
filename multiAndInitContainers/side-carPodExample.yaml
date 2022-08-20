@@ -1,0 +1,24 @@
+---
+# To test run kubeclt logs pod, sidecar container should export logs to console
+apiVersion: v1
+kind: Pod
+metadata:
+  name: side-car-pod
+spec:
+  containers:
+  - name: main-cont
+    image: busybox
+    command: ['sh', '-c', 'while true; do echo logs data > /output/output.log; sleep5; done']
+    volumeMounts:
+      - name: sharedVol
+        mountPath: /output
+  - name: sidecar
+    image: busybox
+    command: ['sh', '-c', 'tail -f /input/output.log']
+    volumeMounts:
+      - name: sharedvol
+        mountPath: /input
+volumes:
+  - name: sharedvol
+    emptyDir: {}
+...
