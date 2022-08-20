@@ -1,0 +1,17 @@
+---
+# Just place this file in the default manifest startup path for your kubelet daemon,
+# if cluster is installed by kubeadm that will default to /etc/kuberenetes/manifests/
+# To avail the pod existence just restart kubelet service and it will create the staticPod as it starts up
+# You'll notice that in k8s-cp a new pod will appear, but it is actually a mirror-pod, even if you deleted it, k8s-cp will just create a new mirror-pod
+# and the staticPod will remain un-managed an independent in the node it was created in
+apiVersion: v1
+kind: Pod
+metadata:
+  name: logger
+spec:
+  containers:
+    - name: logger
+      image: acgorg/beebox-diagnostic:1      
+      ports:
+      - containerPort: 80  
+...
