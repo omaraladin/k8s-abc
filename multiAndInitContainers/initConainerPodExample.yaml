@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: delayed-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+  initContainers:
+  - name: delay-container
+    image: busybox
+    #Wait for 30 seconds then start Nginx appContainer
+    command: ['sleep', '30']
+...
