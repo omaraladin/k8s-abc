@@ -1,0 +1,5 @@
+ResourceRequest:
+  Affects Scheduling only, a way to tell the Scheduler the minimum amount of CPU and RAM that should be available on the chosen worker-node to schedule the pod containing the containers
+  
+ResourceLimit:
+  Affects the containers themselves, determines the amount of resource your container is allowed to use from its worker-node
