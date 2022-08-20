@@ -1,5 +1,5 @@
 # Probes:
-  a way to determine the health of containers "I might say pods"
+  a way to determine the health of containers, inside a pod each container could have a different probe type "which makes sense"
  
 # Types:
   # 1. Liveness probes:
