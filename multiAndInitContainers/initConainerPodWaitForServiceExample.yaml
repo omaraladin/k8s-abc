@@ -1,1 +1,15 @@
-
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: delayed-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+  initContainers:
+  - name: proxy-check-container
+    image: busybox
+    #Wait for k8s-svc named my-proxy to exist then start Nginx appContainer
+    command: ['sh', '-c', 'until nslookup my-proxy; do echo waiting for the proxy to start...; sleep 2; done']
+...
