@@ -8,3 +8,5 @@ check the list <a href="https://github.com/containernetworking/cni#3rd-party-plu
 k8s uses DNS to allow pods to locate other pods and services using Domain Names instead of IP addresses. The default is CoreDNS which runs as a service in the kube-system namespace
 * a pod with 192.168.1.10 in the default namespace will have the domain name 192-168-1-10.default.cluster.local
 * a pod with 192.168.1.20 in the production namespace will have the domain name 192-168-1-20.production.cluster.local
+# Network Policy
+a networkPolicy is a k8s=object that allows to control and manage the traffic to and from (Ingress and Egress) to pods, using podSelectors, namespaceSelectors, or IpBlock to define WHERE the networkPolicy is applied. think of it as SecurityGroups in networking
