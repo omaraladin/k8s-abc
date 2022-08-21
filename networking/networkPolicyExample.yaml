@@ -22,6 +22,7 @@ spec:
         - namespaceSelector:
             matchLabels:
               project: myproject
+          #Only PODS with this LABEL can consume 6379/TCP port
         - podSelector:
             matchLabels:
               role: frontend
