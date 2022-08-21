@@ -6,5 +6,5 @@ a CNI plugin is a network plugin that allows network-connectivity between pods i
 check the list <a href="https://github.com/containernetworking/cni#3rd-party-plugins">here</a> in k8s-cni Github page
 # DNS
 k8s uses DNS to allow pods to locate other pods and services using Domain Names instead of IP addresses. The default is CoreDNS which runs as a service in the kube-system namespace
-* a pod with 192.168.1.10 in the default namespace will have the domain name 192.168.1.10.default.cluster.local
-* a pod with 192.168.1.20 in the production namespace will have the domain name 192.168.1.20.production.cluster.local
+* a pod with 192.168.1.10 in the default namespace will have the domain name 192-168-1-10.default.cluster.local
+* a pod with 192.168.1.20 in the production namespace will have the domain name 192-168-1-20.production.cluster.local
