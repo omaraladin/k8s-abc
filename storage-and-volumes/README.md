@@ -10,4 +10,9 @@ Allows you to treat storage as an abstract resource and consume it with your Pod
   
 It goes like this:  
 |- PersistentVolume -> PersistentVolumeClaim "assigned to the pod" -> Pod  
-asd
+
+# Volumes Types
+  * NFS  
+  * CLoud Storage solutions (AWS, GCP, Azure)  
+  * ConfigMaps and Secrets (to avail data and secrets)
+  * A simple Dir on a k8s-node
