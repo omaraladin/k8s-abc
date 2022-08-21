@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  volumes:
+  - name: output-vol
+    hostPath:
+      path: /var/data
+  containers:
+  - name: logger1  
+    image: busybox
+    command: ['sh', '-c', 'while true; do echo SUCCESS! >> /vol/output.log; sleep 5 ; done']
+    volumeMounts:
+    - name: output-vol
+      mountPath: /vol
