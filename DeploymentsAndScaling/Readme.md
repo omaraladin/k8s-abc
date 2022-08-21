@@ -7,6 +7,6 @@ the hierarchy is like this
     
 # Scaling
 with commands such as:
-#kubectl scale deployments/my-app --replicas=10
+# kubectl scale deployments/my-app --replicas=10
 or:
-#kubectl edit deployment my-app #and then editing the replicas number in the YAML file
+# kubectl edit deployment my-app #and then editing the replicas number in the YAML file
