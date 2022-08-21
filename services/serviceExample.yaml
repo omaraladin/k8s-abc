@@ -6,7 +6,6 @@ metadata:
 spec:
   #This is the default already
   type: ClusterIP
-  #type: NodePort
   selector:
     app: MyApp
   ports:
