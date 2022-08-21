@@ -3,4 +3,4 @@ a CNI plugin is a network plugin that allows network-connectivity between pods i
 * Calico
 * Weave
 * Romana
-check the list <a href="[https://github.com/othneildrew/Best-README-Template](https://github.com/containernetworking/cni#3rd-party-plugins)"><strong>here</strong></a> in k8s-cni Github page
+check the list <a href="https://github.com/containernetworking/cni#3rd-party-plugins">here</a> in k8s-cni Github page
