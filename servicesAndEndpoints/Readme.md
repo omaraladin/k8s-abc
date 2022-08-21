@@ -3,7 +3,7 @@ a way to EXPOSE an application running as a set of Pods. It abstracts pods to an
 # Services Types
   # 1. NodePort
   # 2. ClusterIp
-  Exposing an app INSIDE the k8s-cluster with an IP, other nodes in the cluster can communicate.__
+  Exposing an app INSIDE the k8s-cluster with an IP, other nodes in the cluster can communicate.<br/ >
   use it when the CLIENT is identified as other pods or apps INSIDE the k8s-cluster
   # 3. LoadBAlancer
   # 4. ExternalName (outside CKA scope)
