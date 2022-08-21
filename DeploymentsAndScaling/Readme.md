@@ -6,7 +6,4 @@ the hierarchy is like this
     -* Containers "which are not represented in K8s-ControlPlane"
     
 # Scaling
-with commands such as:
-* kubectl scale deployments/my-app --replicas=10
-or:
-* kubectl edit deployment my-app #and then editing the replicas number in the YAML file
+Scaling is scaling, thank you :*
