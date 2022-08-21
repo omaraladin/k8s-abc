@@ -13,4 +13,4 @@ a way to EXPOSE an application running as a set of Pods. It abstracts pods to an
   # 4. ExternalName (outside CKA scope)
 
 # Endpoints
-the actual entity that k8s-service routes traffic to. They are objects that are linked to Pods, they simply describe IP+Port of a Pod, BAM!
+the actual entity that k8s-service routes traffic to. They are objects that are linked to Services, they simply describe IP+Port of Pods, BAM!
