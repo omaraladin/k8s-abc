@@ -9,8 +9,5 @@ volumes allow to store data **outside** the container filesystem, while still al
 Allows you to treat storage as an abstract resource and consume it with your Pods  
   
 It goes like this:  
-|- PersistentVolume  
-  |- PersistentVolumeClaim "assigned to the pod"  
-     |- Pod  
-
-     
+|- PersistentVolume -> PersistentVolumeClaim "assigned to the pod" -> Pod  
+asd
