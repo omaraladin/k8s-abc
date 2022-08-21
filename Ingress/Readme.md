@@ -4,4 +4,6 @@ functionalities, such as:
 * SSL Termination
 * Advanced LoadBalancing
 * Name-based virtual hosting  
-Ingress uses routingRules to to determine WHICH Requests, should the routing be applied to. and Note that Ingresses routes traffic to **Services**
+
+Ingress uses routingRules to to determine WHICH Requests, should the routing be applied to. and Note that Ingresses routes traffic to **Services**  
+using Either Service **Port**, or Service **NamedPort**
