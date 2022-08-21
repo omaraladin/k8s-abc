@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      #The port that the SERVICE will open and listen to
+      port: 80
+      #The port opened by the PODS
+      targetPort: 9376
+...
