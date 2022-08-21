@@ -1,0 +1,6 @@
+as simple as scaling, just edit the YAML files or direct commands, examples
+* kubectl edit deployment app-1 #And then you change a podItem such as Image or configMap
+* kubectl set image deployment/app-1 nginx=nginx:1.12.2
+* kubectl rollout status deployment/app-1 #Shows the status
+* kubectl rollout history deployment app-1 #Shows the revisions of Rolling updates, Commands will appear if you specified --record flag
+* kubectl rollout undo deployment/app-1 (--to-revision=3) , Rolling Back 
