@@ -14,6 +14,12 @@ volumes allow to store data **outside** the container filesystem, while still al
 
 # Persistent Volumes
 Allows you to treat storage as an abstract resource and consume it with your Pods  
-  
+Uses a set of attroibutes to describe the underlying storage resource, whether a disk or a cloudStorageObject  
+
 It goes like this:  
 |- PersistentVolume -> PersistentVolumeClaim "assigned to the pod" -> Pod  
+|- StorageClassName  
+    |  
+    V  
+    "created to specify a storageClass"  
+    
