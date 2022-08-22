@@ -18,8 +18,3 @@ Uses a set of attroibutes to describe the underlying storage resource, whether a
 
 It goes like this:  
 |- PersistentVolume -> PersistentVolumeClaim "assigned to the pod" -> Pod  
-|- StorageClassName  
-    |  
-    V  
-    "created to specify a storageClass"  
-    
