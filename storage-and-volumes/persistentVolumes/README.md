@@ -6,9 +6,12 @@ created to specify a storageClass charactristics, you can use them to metadata y
 
 # Persistent Volume Reclaim Policy
 defines what should happen to the persistentVolume storage <b>after</b> it has been used by a Pod  
-  * Retain
+  * Retain  
   Keeps all data in storage
-  * Recycle 
+  * Recycle  
   Deletes all data in storage
-  * Delete
-  Delete the underlying storage resource, only works with Cloud Storage Resources
+  * Delete  
+  Delete the underlying storage resource, only works with Cloud Storage Resources  
+
+# Persistent Volume Claim
+Represents a user's <b>request</b> for storage resources. When created, it searches for a PersistentVolume PV that match the PVC request requirements, if it finds, it (the PVC) will bind to that (the PV)
