@@ -14,4 +14,7 @@ defines what should happen to the persistentVolume storage <b>after</b> it has b
   Delete the underlying storage resource, only works with Cloud Storage Resources  
 
 # Persistent Volume Claim
-Represents a user's <b>request</b> for storage resources. When created, it searches for a PersistentVolume PV that match the PVC request requirements, if it finds, it (the PVC) will bind to that (the PV)
+Represents a user's <b>request</b> for storage resources. When created, it searches for a PersistentVolume PV that match the PVC request requirements, if it finds, it (the PVC) will bind to that (the PV)  
+
+# Creation Sequence
+1. StorageClass "maybe to allow expansion" -> 2. PersistentVolume "Specify hostPath or type + retainPolicy" -> 3. PersistentVolumeClaim -> 4. Pod
